@@ -43,8 +43,9 @@ Link: [`Shop`](https://dichvutaikhoan.online/)
 - Quản lý bình luận: Kiểm duyệt và xử lý bình luận.
 - Quản lý yêu cầu: Quản lý các yêu cầu từ khách hàng.
 ### Quản lý tài khoản
-- Admin: Cấp và xóa quyền cho các loại tài khoản Manager và User, quyền tối cao.
-- Manager: Có thể quản lý hệ thống nhưng không thể cấp quyền cho tài khoản khác.
+- Admin: Quyền tối cao, cấp và xóa quyền cho các loại tài khoản Manager, Sale và User.
+- Manager: Có thể quản lý hệ thống nhưng không thể cấp quyền cho tài khoản khác, thuộc nhóm quyền quản trị.
+- Sale: Thuộc nhóm quyền cộng tác viên.
 
 ## Sự khác biệt
 
@@ -59,45 +60,44 @@ Nền tảng này có những tính năng khác biệt so với các dự án th
 
 ## Công nghệ sử dụng
 
-- Ngôn ngữ: Java (Spring Boot)
-- Cơ sở dữ liệu: ~~MySQL (AWS RDS)~~ SQL Server
-- Nền tảng triển khai: ~~AWS Elastic Beanstalk~~ Heroku
+- Ngôn ngữ: Java (Spring Boot), HTML, CSS, Javascript
+- Cơ sở dữ liệu: ~~MySQL (AWS RDS)~~ ~~SQL Server~~ VPS MariaDB
+- Nền tảng triển khai: ~~AWS Elastic Beanstalk~~ ~~Heroku~~ VPS Linux Ubuntu 22.04
 - Lưu trữ media: Cloudinary
-- Bảo mật: SSL/TLS qua Cloudflare, OTP, reCaptcha, host qua Tenten
-- Thanh toán trực tuyến: VNPay, Momo, Chuyển khoản ngân hàng
+- Bảo mật: SSL/TLS qua Let's Encrypt và Cloudflare, OTP, reCaptcha, Domain qua Tenten
+- Thanh toán trực tuyến: VNPay, Momo, ZaloPay, Chuyển khoản ngân hàng
 - Xác thực đăng nhập: Google, Facebook, Authentication
 
 ## Hướng dẫn cài đặt
 
 ### 1. Chuẩn bị môi trường
-Sử dụng ~~Java 18 (JDK-18.x.x)~~ Java 21 (JDK-21.x.x), công cụ IDE (IntelliJ, NetBean, VSCode,...), Apache Tomcat (version 9.x.x), MySQL, SQL Server
+Sử dụng Java 21 (JDK-21.x.x) hoặc cao hơn, công cụ IDE (IntelliJ, NetBean, VSCode,...), ~~Apache Tomcat (version 9.x.x)~~, MySQL, SQL Server
 ### 2. Clone repository
-To deploy this project run
 
 ```bash
-  git clone https://github.com/ngphuan2017/checkorder-public.git
+  git clone https://github.com/ngphuan2017/dichvutaikhoan.git
 ```
 ### 3. Cài đặt các phụ thuộc
-- Cài đặt các thư viện phụ thuộc từ `pom.xml`
-- Các cài đặt kết nối Database, Gmail, Google, Facebook, reCaptcha, VnPay, Momo, AIOv2 từ file `application.properties` đã được ẩn đi vì lý do dữ liệu cá nhân.
+- Cài đặt các thư viện phụ thuộc từ `pom.xml` đầy đủ trước khi build.
+- Các cài đặt kết nối (username|password) Database, Gmail, Google, Facebook, reCaptcha, VnPay, Momo, AIOv2 từ file `application.properties` đã được ẩn đi vì lý do dữ liệu cá nhân.
 
 ## Tài khoản thử nghiệm
 
-| Quyền truy cập | Username           | Password                       |
-| :-------- |:-------------------| :-------------------------------- |
+| Quyền truy cập | Username           | Password   |
+| :-------- |:-------------------|:-----------|
 | **Quyền quản trị (Admin)**      | `********(đã che)` | `********` |
 | **Quyền quản lý (Manager)**      | `manager`          | `11012001` |
-| **Khách hàng**      | `ngphuan2023`      | `11012001` |
+| **Khách hàng**      | `ngphuan2017`      | `11012001` |
 
-Liên hệ qua [Zalo](https://zalo.me/0941622670) hoặc [Facebook](https://fb.com/11012001an) để được cấp quyền tài khoản Admin, Manager (không áp dụng cho tài khoản liên kết).
+Liên hệ qua [Zalo](https://zalo.me/0941622670) hoặc [Facebook](https://fb.com/annp.dev) để được cấp quyền tài khoản Admin, Manager, Sale (không áp dụng cho tài khoản liên kết).
 
 ## Đóng góp
 
-Chúng tôi hoan nghênh mọi đóng góp từ cộng đồng! Hãy fork repository và gửi pull request để được xem xét.
+Chúng tôi hoan nghênh mọi đóng góp từ cộng đồng! Hãy gửi pull request để được xem xét.
 
 ## Feedback
 
-Nếu bạn muốn trao đổi thêm, hãy liên hệ qua phuan2017@gmail.com hoặc phuanshop2023@gmail.com
+Nếu bạn muốn trao đổi thêm, hãy liên hệ qua email: phuan2017@gmail.com
 
 ## Giấy phép
 
